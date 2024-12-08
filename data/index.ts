@@ -51,7 +51,7 @@ export const navItems = [
     },
     {
       id: 6,
-      title: "Do you want to start a project together?",
+      title: "Want to hire me or start a project together?",
       description: "",
       className: "md:col-span-2 md:row-span-2",
       imgClassName: "",
@@ -108,6 +108,7 @@ export const navItems = [
       des: "SciBERT based Model, to understand the context from the clinical text",
       img: "/bert.webp",
       iconLists: ["/icons8-python.svg", "/icons8-pytorch.svg", "/icons8-nvidia.svg", "/icons8-linux-48.png"],
+      link: "Bachelor's Thesis"
      
     }
   ];

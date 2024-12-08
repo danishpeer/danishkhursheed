@@ -2,6 +2,8 @@ import React from 'react'
 import { Spotlight } from './ui/spotlight';
 import ShimmerButton from './ui/shimmer-button';
 import { FaExpand } from 'react-icons/fa';
+import { socialMedia } from '@/data';
+import Link from 'next/link';
 
 const Hero = () => {
     const words = ["Design", "Develop", "Deploy"];
@@ -28,6 +30,15 @@ const Hero = () => {
                 <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
                     I am a Software <span className='text-purple'>Engineer</span>. I design distributed backends at scale, build deployment pipelines, and create AI models.
                 </p>
+                <div className='flex items-center md:gap-3 gap-6'>
+                    {
+                        socialMedia && socialMedia.map(profile => (
+                            <div key={profile.id} className='w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-100 bg-opacity-75 bg-black-200 rounded-lg border border-black-300'>
+                                <Link href={profile.href}><img src={profile.img} alt={profile.img} width={20} height={20} /></Link>
+                            </div>
+                        ))
+                    }
+                </div>
                 <a href='#about'>
                     <ShimmerButton title='Dive deeper' icon={<FaExpand/>} position='right' />
                 </a>
